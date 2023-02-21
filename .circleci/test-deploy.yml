@@ -97,7 +97,7 @@ workflows:
           executor:
             name: "unity/macos"
             editor_version: "2021.3.1f1"
-            resource_class: "large"
+            resource_class: "gustomedialab/mac-build"
           project-path: "Unity2D-Demo-Game-CI-CD/src"
           test-platform: "playmode"
           filters: *filters
@@ -148,7 +148,7 @@ workflows:
           executor:
             name: "unity/macos"
             editor_version: "2021.3.1f1"
-            resource_class: "large"
+            resource_class: "gustomedialab/mac-build"
           project-path: "Unity2D-Demo-Game-CI-CD/src"
           build-target: StandaloneOSX
           compress: true
@@ -200,7 +200,7 @@ workflows:
             name: "unity/ubuntu"
             target_platform: "mac-mono"
             editor_version: "2021.3.2f1"
-            resource_class: "large"
+            resource_class: "gustomedialab/mac-build"
           project-path: "Unity2D-Demo-Game-CI-CD/src"
           build-target: "StandaloneOSX"
           filters: *filters
@@ -320,7 +320,7 @@ workflows:
           executor:
             name: "unity/macos"
             editor_version: "2021.3.1f1"
-            resource_class: "large"
+            resource_class: "gustomedialab/mac-build"
           project-path: "Unity2D-Demo-Game-CI-CD/src"
           build-target: StandaloneOSX
           build-method: "MyCustomBuildCommand.MyCustomBuildMethod"
