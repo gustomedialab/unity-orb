@@ -24,16 +24,6 @@ parameters:
     description: |
       Enter the name for this build.
       If left blank, the build will be named after the target platform.
-  cache-version:
-    type: string
-    default: "v1"
-    description: |
-      Change the default cache version if you need to clear the cache for any reason.
-  include-branch-in-cache-key:
-    type: boolean
-    default: true
-    description: >
-      If true, this cache bucket will only apply to jobs within the same branch.
   store-artifacts:
     type: boolean
     default: true
@@ -84,10 +74,6 @@ steps:
         SCRIPT_UTILS: << include(scripts/utils.sh) >>
         DEPENDENCY_UNITY_BUILDER: << include(dependencies/unity-builder/BuildCommand.cs) >>
       command: << include(scripts/build.sh) >>
-  - save_cache:
-      key: unity-deps-{{ arch }}-<< parameters.cache-version >>-<<# parameters.include-branch-in-cache-key >>{{ .Branch }}-<</ parameters.include-branch-in-cache-key >>{{ checksum "<< parameters.project-path >>/Packages/packages-lock.json" }}
-      paths:
-        - << parameters.project-path >>/Library/
   - when:
       condition:
         and:
