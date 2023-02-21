@@ -95,7 +95,7 @@ workflows:
           unity-username-var-name: "UNITY_USERNAME"
           unity-password-var-name: "UNITY_PASSWORD"
           executor:
-            name: "unity/macos"
+            name: 'unity/macos-runner'
             editor_version: "2021.3.1f1"
             resource_class: "gustomedialab/mac-build"
           project-path: "Unity2D-Demo-Game-CI-CD/src"
@@ -146,7 +146,7 @@ workflows:
           unity-username-var-name: "UNITY_USERNAME"
           unity-password-var-name: "UNITY_PASSWORD"
           executor:
-            name: "unity/macos"
+            name: 'unity/macos-runner'
             editor_version: "2021.3.1f1"
             resource_class: "gustomedialab/mac-build"
           project-path: "Unity2D-Demo-Game-CI-CD/src"
@@ -318,7 +318,7 @@ workflows:
           unity-username-var-name: "UNITY_USERNAME"
           unity-password-var-name: "UNITY_PASSWORD"
           executor:
-            name: "unity/macos"
+            name: 'unity/macos-runner'
             editor_version: "2021.3.1f1"
             resource_class: "gustomedialab/mac-build"
           project-path: "Unity2D-Demo-Game-CI-CD/src"
